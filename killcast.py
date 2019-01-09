@@ -12,7 +12,7 @@ C = '\033[36m' # cyan
 W = '\033[0m'  # white
 version = '1.0.0'
 
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser(description="Manipulate Chromecast Devices in your Network")
 parser.add_argument('-t', '--ip', help='IP Address of Chromecast', required=True)
 args = parser.parse_args()
 ip = args.ip
@@ -96,7 +96,7 @@ def reboot():
 	print ('\n', end='')
 	url = 'http://{}:{}/setup/reboot'.format(ip,port)
 	data = {'params' : 'now'}
-	print ('\n' + G + '[+]' + C + ' Rebooting...')
+	print (G + '[+]' + C + ' Rebooting...')
 	r = requests.post(url, json=data, headers=header)
 	print ('\n', end='')
 
@@ -105,33 +105,32 @@ def reset():
 	print ('\n', end='')
 	reset = 'http://{}:{}/setup/reboot'.format(ip, port)
 	data = {'params' : 'fdr'}
-	print ('\n' + G + '[+]' + C + ' Performing Factory Reset...')
-	r = requests.post(url, json=data, headers=header)
+	print (G + '[+]' + C + ' Performing Factory Reset...')
+	r = requests.post(reset, json=data, headers=header)
 	print ('\n', end='')
 
 def appkill():
 	global ip, port, header
 	print ('\n', end='')
-	while True:
-		print (G + '[1]' + C + ' YouTube' + W)
-		print (G + '[2]' + C + ' Netflix' + W)
-		print (G + '[3]' + C + ' Google Play Music' + W)
-		choice = input('\n' + R + '[>] ' + W)
-		if choice == '1':
-			print (G + '[+]' + C + ' Killing YouTube...')
-			url = 'http://{}:{}/apps/YouTube'.format(ip, port)
-			r = requests.delete(url, headers=header)
-			print ('\n', end='')
-		elif choice == '2':
-			print (G + '[+]' + C + ' Killing Netflix...')
-			url = 'http://{}:{}/apps/Netflix'.format(ip, port)
-			r = requests.delete(url, headers=header)
-			print ('\n', end='')
-		elif choice == '3':
-			print (G + '[+]' + C + ' Killing Google Play Music...')
-			url = 'http://{}:{}/apps/GoogleMusic'.format(ip, port)
-			r = requests.delete(url, headers=header)
-			print ('\n', end='')
+	print (G + '[1]' + C + ' YouTube' + W)
+	print (G + '[2]' + C + ' Netflix' + W)
+	print (G + '[3]' + C + ' Google Play Music' + W)
+	choice = input('\n' + R + '[>] ' + W)
+	if choice == '1':
+		print (G + '[+]' + C + ' Killing YouTube...')
+		url = 'http://{}:{}/apps/YouTube'.format(ip, port)
+		r = requests.delete(url, headers=header)
+		print ('\n', end='')
+	elif choice == '2':
+		print (G + '[+]' + C + ' Killing Netflix...')
+		url = 'http://{}:{}/apps/Netflix'.format(ip, port)
+		r = requests.delete(url, headers=header)
+		print ('\n', end='')
+	elif choice == '3':
+		print (G + '[+]' + C + ' Killing Google Play Music...')
+		url = 'http://{}:{}/apps/GoogleMusic'.format(ip, port)
+		r = requests.delete(url, headers=header)
+		print ('\n', end='')
 	print ('\n', end='')
 
 def core():
@@ -151,7 +150,7 @@ def core():
 		elif choice == '3':
 			appkill()
 		elif choice == '4':
-			test()
+			reset()
 		else:
 			print (R + '[-]' + C + ' Invalid Choice...Try Again.' + W)
 			print ('\n', end='')
