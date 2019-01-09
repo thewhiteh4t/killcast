@@ -25,6 +25,7 @@ Inspiration - [Thousands of Google Chromecast Devices Hijacked to Promote PewDie
 ## What is not working
 
 * Play any YouTube Video
+* Unable to kill Play Music
 * Other things that we are not aware of ;)
 
 ## Tested On :
