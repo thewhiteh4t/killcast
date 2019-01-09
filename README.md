@@ -2,7 +2,7 @@
 <p></p>
 
 <h4 align="center">
-Get Accurate Location using a Fake Website
+Manipulate Chromecast Devices in your Network
 </h4>
 
 <p align="center">
