@@ -11,3 +11,48 @@ Manipulate Chromecast Devices in your Network
 Inspiration - [Thousands of Google Chromecast Devices Hijacked to Promote PewDiePie](https://thehackernews.com/2019/01/chromecast-pewdiepie-hack.html)
 
 **This tool is a Proof of Concept and is for Research Purposes Only, killcast shows how Chromecast devices can be easily manipulated and hijacked by anyone.**
+
+## Features
+
+* Interesting Information such as Build Version, Country, Timezone etc
+* Rename Devices
+* Reboot
+* Perform Factory Reset
+* Kill Active Applications such as YouTube, Netflix and Google Play Music
+
+## Tested On :
+
+* Kali Linux 2019.1
+* Ubuntu 18.04
+* Termux
+
+## Installation
+
+### Ubuntu / Kali Linux / Termux
+
+```
+git clone https://github.com/thewhiteh4t/killcast.git
+cd killcast
+apt-get install python3
+pip install requests
+```
+
+## Usage
+
+```
+python3 killcast.py -h
+
+usage: killcast.py [-h] -t IP
+
+Manipulate Chromecast Devices in your Network
+
+optional arguments:
+  -h, --help      show this help message and exit
+  -t IP, --ip IP  IP Address of Chromecast
+```
+
+```
+python3 killcast.py -t 192.168.0.100
+```
+
+## Demo - [YouTube]()
