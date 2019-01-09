@@ -114,7 +114,7 @@ def appkill():
 	print ('\n', end='')
 	print (G + '[1]' + C + ' YouTube' + W)
 	print (G + '[2]' + C + ' Netflix' + W)
-	print (G + '[3]' + C + ' Google Play Music' + W)
+	#print (G + '[3]' + C + ' Google Play Music' + W)
 	choice = input('\n' + R + '[>] ' + W)
 	if choice == '1':
 		print (G + '[+]' + C + ' Killing YouTube...')
