@@ -14,11 +14,16 @@ Inspiration - [Thousands of Google Chromecast Devices Hijacked to Promote PewDie
 
 ## Features
 
-* Interesting Information such as Build Version, Country, Timezone etc
-* Rename Devices
+* Extract Interesting Information such as Build Version, Country, Timezone etc
+* Rename
 * Reboot
 * Perform Factory Reset
 * Kill Active Applications such as YouTube, Netflix and Google Play Music
+
+## What is not working
+
+* Play any YouTube Video
+* Other things that we are not aware of ;)
 
 ## Tested On :
 
