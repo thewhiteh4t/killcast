@@ -8,7 +8,7 @@ Manipulate Chromecast Devices in your Network
 <img src="https://img.shields.io/badge/Termux-✔-red.svg?style=plastic">
 </p>
 
-![killcast](https://i.imgur.com/8EOXyxX.png)
+<p align="center"><img src="https://i.imgur.com/8EOXyxX.png"></p>
 
 Inspiration - [Thousands of Google Chromecast Devices Hijacked to Promote PewDiePie](https://thehackernews.com/2019/01/chromecast-pewdiepie-hack.html)
 
