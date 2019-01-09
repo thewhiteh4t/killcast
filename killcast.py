@@ -33,6 +33,30 @@ def banner():
 	print (G + '[>]' + C + ' Created By : ' + W + 'thewhiteh4t')
 	print (G + '[>]' + C + ' Version    : ' + W + version + '\n')
 
+
+def updater():
+	print (G + '[+]' + C + ' Checking For Updates...' + W, end='')
+	update = requests.get('https://raw.githubusercontent.com/thewhiteh4t/killcast/master/version.txt', timeout = 5)
+	update = update.text.split(' ')[1]
+	update = update.strip()
+
+	if update != version:
+		print ('\n\n' + G + '[!]' + C + ' A New Version is Available : ' + W + update)
+		ans = input('\n' + G + '[!]' + C + ' Update ? [y/n] : ' + W)
+		if ans == 'y':
+			print ('\n' + G + '[+]' + C + ' Updating...' + W + '\n')
+			subp.check_output(['git', 'reset', '--hard', 'origin/master'])
+			subp.check_output(['git', 'pull'])
+			print ('\n' + G + '[+]' + C + ' Script Updated...Execute Again...' + W)
+			sys.exit()
+		elif ans == 'n':
+			pass
+		else:
+			print ('\n' + R + '[-]' + C + ' Invalid Character...Skipping...'+ W)
+	else:
+		print (G + ' Up-to-date' + W)
+	print ('\n', end='')
+
 def info():
 	global ip, header
 	info_url = 'http://{}:{}/ssdp/device-desc.xml'.format(ip,port)
@@ -158,6 +182,7 @@ def core():
 
 try:
 	banner()
+	updater()
 	info()
 	core()
 except KeyboardInterrupt:
