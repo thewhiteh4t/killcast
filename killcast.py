@@ -10,7 +10,7 @@ R = '\033[31m' # red
 G = '\033[32m' # green
 C = '\033[36m' # cyan
 W = '\033[0m'  # white
-version = '1.0.0'
+version = '1.0.1'
 
 parser = argparse.ArgumentParser(description="Manipulate Chromecast Devices in your Network")
 parser.add_argument('-t', '--ip', help='IP Address of Chromecast', required=True)
@@ -101,9 +101,8 @@ def info():
 		print (G + '[+]' + C + ' Timezone       : ' + W + str(tzone))
 		print (G + '[+]' + C + ' Uptime         : ' + W + str(uptime))
 		print ('\n', end='')
-	except Exception as e:
-		print (R + '[-]' + C + ' Error : ' + W + str(e))
-		exit()
+	except:
+		pass
 
 def rename():
 	global ip, port, header
@@ -160,21 +159,27 @@ def appkill():
 def core():
 	while True:
 		print (G + '[*]' + C + ' Actions : ' + W + '\n')
-		print (G + '[1]' + C + ' Rename' + W)
-		print (G + '[2]' + C + ' Reboot' + W)
-		print (G + '[3]' + C + ' Kill Apps' + W)
-		print (G + '[4]' + C + ' Factory Reset' + W)
+		print (G + '[1]' + C + ' Info' + W)
+		print (G + '[2]' + C + ' Rename' + W)
+		print (G + '[3]' + C + ' Reboot' + W)
+		print (G + '[4]' + C + ' Kill Apps' + W)
+		print (G + '[5]' + C + ' Factory Reset' + W)
+		print (G + '[6]' + C + ' Exit' + W)
 
 		choice = input('\n' + R + '[>] ' + W)
 
 		if choice == '1':
-			rename()
+			info()
 		elif choice == '2':
-			reboot()
+			rename()
 		elif choice == '3':
-			appkill()
+			reboot()
 		elif choice == '4':
+			appkill()
+		elif choice == '5':
 			reset()
+		elif choice == '6':
+			exit()
 		else:
 			print (R + '[-]' + C + ' Invalid Choice...Try Again.' + W)
 			print ('\n', end='')
