@@ -37,19 +37,24 @@ Inspiration - [Thousands of Google Chromecast Devices Hijacked to Promote PewDie
 
 ## Tested On :
 
+* BlackArch Linux
 * Kali Linux 2019.1
 * Ubuntu 18.04
 * Termux
 
 ## Installation
 
+### BlackArch
+```
+pacman -S killcast
+```
+
 ### Ubuntu / Kali Linux / Termux
 
 ```
 git clone https://github.com/thewhiteh4t/killcast.git
 cd killcast
-apt-get install python3
-pip install requests
+pip3 install requests
 ```
 
 ## Usage
