@@ -12,7 +12,7 @@ Manipulate Chromecast Devices in your Network
   <br>
   Available in
   <br>
-  <img src="https://i.imgur.com/IPiAUZi.png">
+  <img src="https://i.imgur.com/1wJVDV5.png">
 </p>
 
 <p align="center"><img src="https://i.imgur.com/8EOXyxX.png"></p>
