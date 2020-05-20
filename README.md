@@ -1,4 +1,4 @@
-<p align="center"><img src="https://i.imgur.com/HuRoaZn.png"></p>
+<p align="center"><img src="https://i.imgur.com/k9L3q2x.jpg"></p>
 <h4 align="center">
 Manipulate Chromecast Devices in your Network
 </h4>
