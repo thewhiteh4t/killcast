@@ -15,31 +15,33 @@ Manipulate Chromecast Devices in your Network
   <img src="https://i.imgur.com/1wJVDV5.png">
 </p>
 
-<p align="center"><img src="https://i.imgur.com/8EOXyxX.png"></p>
-
 Inspiration - [Thousands of Google Chromecast Devices Hijacked to Promote PewDiePie](https://thehackernews.com/2019/01/chromecast-pewdiepie-hack.html)
 
 **This tool is a Proof of Concept and is for Research Purposes Only, killcast shows how Chromecast devices can be easily manipulated and hijacked by anyone.**
 
 ## Features
 
-* Extract Interesting Information such as Build Version, Country, Timezone etc
-* Rename
-* Reboot
+* Extract Chromecast Device Information
+* IP Address Reconnaissance
+* Extract Saved Networks
+* Scan for Nearby WiFi Access Points
+* Forget a WiFi Access Point
+* Rename Device
+* Kill Running Applications
+* Reboot Device
 * Perform Factory Reset
-* Kill Active Applications such as YouTube, Netflix and Google Play Music
 
-## What is not working
+## To Do
 
-* Play any YouTube Video
-* Unable to kill Play Music
-* Other things that we are not aware of ;)
+* Play YouTube Videos
+* Set wallpapers
+* Kill more applications
 
 ## Tested On :
 
 * BlackArch Linux
-* Kali Linux 2019.1
-* Ubuntu 18.04
+* Kali Linux
+* Ubuntu
 * Termux
 
 ## Installation
@@ -75,4 +77,8 @@ optional arguments:
 python3 killcast.py -t 192.168.0.100
 ```
 
-## Demo - [YouTube](https://youtu.be/8wmWnMVE2aw)
+## Demo
+
+| Demo | Link |
+|-|-|
+| First Version | https://www.youtube.com/watch?v=8wmWnMVE2aw |
